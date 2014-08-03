@@ -22,6 +22,11 @@ _ = require 'lodash'
   ###
 module.exports = anchorChain = (validationSource, validationParams) ->
 
+  if (arguments.length != 2)
+    err = new Error('Valdation requires exactly two parameters. Either validationObjectArray and data or validationValue and anchor validationRuleObject.')
+    throw err;
+    
+  
   if _.isArray(validationSource)
     data = validationParams
     errors = []
