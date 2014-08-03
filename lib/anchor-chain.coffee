@@ -56,8 +56,8 @@ enhanceErrors = (errors, validationParams, validationKey) ->
 
   addExpectedAndKey = (errorObject) ->
     # add the property name that was tested
-    
-    if ((typeof errorObject.property == undefined || errorObject.property == 'undefined') && typeof validationKey != 'undefined')
+
+    if ((typeof errorObject.property == 'undefined' || errorObject.property == 'undefined') && typeof validationKey != 'undefined')
       errorObject.property = validationKey
       if typeof errorObject.message == 'string'
         errorObject.message = errorObject.message.replace('undefined', validationKey)
