@@ -6,3 +6,4 @@ npm-debug.log
 server/** 
 server/
 server/tester.coffee
+test.coffee
