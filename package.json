@@ -9,7 +9,7 @@
   "author": "Bastian Kistner",
   "license": "ISC",
   "dependencies": {
-    "anchor": "^0.9.13",
+    "anchor": "^0.10.1",
     "coffee-script": "^1.7.1",
     "lodash": "^2.4.1"
   }

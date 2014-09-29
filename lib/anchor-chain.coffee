@@ -35,11 +35,11 @@ module.exports = anchorChain = (validationSource, validationParams) ->
       validationParams = _.clone(source)
       delete validationParams['key']
 
-      if data[source.key] != undefined
+      if data[source.key] == undefined then data[source.key] = null
 
-        _errors = anchor(data[source.key]).to(validationParams)
-        if _errors
-          errors = errors.concat enhanceErrors(_errors, validationParams, source.key)
+      _errors = anchor(data[source.key]).to(validationParams)
+      if _errors
+        errors = errors.concat enhanceErrors(_errors, validationParams, source.key)
 
     if errors.length == 0 then return false
     else return errors
